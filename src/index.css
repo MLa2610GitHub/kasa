@@ -1,0 +1,164 @@
+/***
+    The new CSS reset - version 1.7.3 (last updated 7.8.2022)
+    GitHub page: https://github.com/elad2412/the-new-css-reset
+***/
+/*
+    Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
+    - The "symbol *" part is to solve Firefox SVG sprite bug
+ */
+*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+  all: unset;
+  display: revert;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reapply the pointer cursor for anchor tags */
+a, button {
+  cursor: revert;
+}
+
+/* Remove list styles (bullets/numbers) */
+ol, ul, menu {
+  list-style: none;
+}
+
+/* For images to not be able to exceed their container */
+img {
+  max-width: 100%;
+}
+
+/* removes spacing between cells in tables */
+table {
+  border-collapse: collapse;
+}
+
+/* Safari - solving issue when using user-select:none on the <body> text input doesn't working */
+input, textarea {
+  -webkit-user-select: auto;
+}
+
+/* revert the 'white-space' property for textarea elements on Safari */
+textarea {
+  white-space: revert;
+}
+
+/* minimum style to allow to style meter element */
+meter {
+  -webkit-appearance: revert;
+  -moz-appearance: revert;
+       appearance: revert;
+}
+
+/* reset default text opacity of input placeholder */
+::-moz-placeholder {
+  color: unset;
+}
+:-ms-input-placeholder {
+  color: unset;
+}
+::placeholder {
+  color: unset;
+}
+
+/* fix the feature of 'hidden' attribute.
+   display:revert; revert to element instead of attribute */
+:where([hidden]) {
+  display: none;
+}
+
+/* revert for bug in Chromium browsers
+   - fix for the content editable attribute will work properly.
+   - webkit-user-select: auto; added for Safari in case of using user-select:none on wrapper element*/
+:where([contenteditable]:not([contenteditable=false])) {
+  -moz-user-modify: read-write;
+  -webkit-user-modify: read-write;
+  overflow-wrap: break-word;
+  -webkit-line-break: after-white-space;
+  -webkit-user-select: auto;
+}
+
+/* apply back the draggable feature - exist only in Chromium and Safari */
+:where([draggable=true]) {
+  -webkit-user-drag: element;
+}
+
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+}
+.navbar ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+.navbar ul li {
+  margin-right: 30px;
+  border: 3px solid transparent;
+  font-size: 24px;
+  line-height: 34px;
+}
+
+a {
+  text-decoration: none;
+  list-style-type: none;
+  cursor: pointer;
+  color: #ff6060;
+  padding-right: 20px;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 500px) {
+  nav {
+    width: 100%;
+  }
+  nav ul {
+    border-bottom: 1px solid #f2f2f2;
+    padding-left: 0;
+  }
+  nav ul li {
+    text-align: center;
+    padding-top: 10px;
+    padding-left: 30px;
+    width: 50%;
+  }
+}
+.logo {
+  background: url(../../../public/logo.svg);
+  position: absolute;
+  left: 0%;
+  right: 83.04%;
+  top: 0%;
+  bottom: 0%;
+}
+.logo img {
+  width: 210px;
+  height: 68px;
+}
+
+body {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 142.6%;
+  /* identical to box height, or 20px */
+  color: #FF6060;
+}
+
+body {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 142.6%;
+  /* or 68px */
+  color: blue;
+}/*# sourceMappingURL=index.css.map */
