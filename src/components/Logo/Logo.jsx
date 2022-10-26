@@ -1,5 +1,4 @@
-import React from 'react';
-import logo from '../../assets/logo.png';
+import logo from '../../assets/logo.svg';
 
 const Logo = () => {
   return (
@@ -7,8 +6,6 @@ const Logo = () => {
       <img src={logo} alt="logo" />
     </div>
   );
-
-  
 };
 
 export default Logo;

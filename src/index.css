@@ -38,10 +38,7 @@ table {
   border-collapse: collapse;
 }
 
-/* Safari - solving issue when using user-select:none on the <body> text input doesn't working */
-input, textarea {
-  -webkit-user-select: auto;
-}
+
 
 /* revert the 'white-space' property for textarea elements on Safari */
 textarea {
@@ -79,8 +76,7 @@ meter {
   -moz-user-modify: read-write;
   -webkit-user-modify: read-write;
   overflow-wrap: break-word;
-  -webkit-line-break: after-white-space;
-  -webkit-user-select: auto;
+ 
 }
 
 /* apply back the draggable feature - exist only in Chromium and Safari */
@@ -131,7 +127,6 @@ a:hover {
   }
 }
 .logo {
-  background: url(../../../public/logo.svg);
   position: absolute;
   left: 0%;
   right: 83.04%;
@@ -141,6 +136,47 @@ a:hover {
 .logo img {
   width: 210px;
   height: 68px;
+}
+
+.footer {
+  height: 209px;
+  width: 1440px;
+  left: -543px;
+  top: 4333px;
+  color: #000000;
+}
+
+.logo {
+  position: absolute;
+  left: 45.76%;
+  right: 45.76%;
+  top: 31.58%;
+  bottom: 49.55%;
+}
+.logo img {
+  height: 39.4444198608px;
+  width: 122px;
+  left: 659px;
+  top: 66px;
+  color: #ffffff;
+}
+
+.texteFooter {
+  position: absolute;
+  left: 32.15%;
+  right: 32.22%;
+  top: 64.11%;
+  bottom: 13.88%;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 142.6%;
+  /* or 34px */
+  display: flex;
+  align-items: flex-end;
+  text-align: center;
+  color: #ffffff;
 }
 
 body {
@@ -160,5 +196,7 @@ body {
   font-size: 48px;
   line-height: 142.6%;
   /* or 68px */
-  color: blue;
+}
+body .section-background {
+  color: greenyellow;
 }/*# sourceMappingURL=index.css.map */

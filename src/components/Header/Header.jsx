@@ -1,8 +1,7 @@
-import React from 'react';
 import { NavLink } from 'react-router-dom';
-import Logo from '../../components/Logo/Logo';
+import Logo from '../Logo/Logo';
 
-const Navbar = () => {
+const Header = () => {
   return (
     <nav className="navbar">
       <Logo />
@@ -23,4 +22,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Header;
