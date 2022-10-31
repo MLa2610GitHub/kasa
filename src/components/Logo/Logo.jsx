@@ -1,9 +1,10 @@
-import logo from '../../assets/logo.svg';
+import logo from '../../assets/logo.png';
+import '../../index.scss';
 
 const Logo = () => {
   return (
-    <div className="logo">
-      <img src={logo} alt="logo" />
+    <div className="logoDiv">
+      <img className="logo" src={logo} alt="logo Kasa" />
     </div>
   );
 };

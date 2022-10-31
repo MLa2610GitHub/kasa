@@ -1,10 +1,14 @@
 @import '../src/utils/normalize';
 @import '../src/utils/variables';
-@import '../src/components/Header/Header';
+@import '../src/components/Header/Header.scss';
 @import '../src/components/Logo/Logo.scss';
-@import '../src/components/Footer/Footer';
-@import '../src/pages/ErrorPage.scss';
+@import '../src/components/Footer/Footer.scss';
+@import '../src/components/List/List.scss';
+
 @import '../src/pages/Home.scss';
+@import '../src/pages/FicheLogement.scss';
+@import '../src/pages/About.scss';
+@import '../src/pages/ErrorPage.scss';
 
 
 

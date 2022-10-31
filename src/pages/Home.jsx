@@ -1,14 +1,21 @@
+import React from 'react';
+import List from '../components/List/List';
+import background from '../assets/eric-muhr-P_XxsdVgtpQ-unsplash.png';
+import '../../src/index.scss';
 
-import Footer from '../components/Footer/Footer';
-
-
-const Home = () => {
+export default function Home() {
   return (
-    <section className="section">
-      <h2>Accueil</h2>
-      <div className="section-background"></div>
-      <Footer />
-    </section>
+    <body>
+      <section
+        className="section1"
+        style={{ backgroundImage: `url(${background})` }}
+      >
+        <div className="section1TextBgd">
+          <p className="textSection1">Chez vous, partout et ailleurs</p>
+        </div>
+      </section>
+
+      <List />
+    </body>
   );
-};
-export default Home;
+}

@@ -1,28 +1,26 @@
 
 import React from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import logements from '../logements.json';
 
 
-const FicheLogement = () => {
-    const { logementId } = useParams();
-    const logement = logements.find((logement) => logement.id === logementId);
-    const { image, title, tag, description, host, rating, location, equipments } = logement;
-
+export default function  FicheLogement () {
+    const params = useLocation();
+    const fiche = logements.find(fiche => fiche.id === params?.state?.id);
+    
     return (
-      <section className="section logement">
-        <img src={image} alt={title} />
-        <h2>{title}</h2>
-        <h5>{tag}</h5>
-        <h5>{rating}</h5>
-        <h5>{host}</h5>
-        <h5>{location}</h5>
-        <h3>{description}</h3>
-        <h3>{equipments}</h3>
-
-        <Link to="/logements">Retour aux logements</Link>
-      </section>
+      <>
+        <h1>{fiche?.title}</h1>
+        <p>{fiche.cover}</p>
+        <p>{fiche.pictures}</p>
+        <p>{fiche.description}</p>
+        <p>{fiche.host.name}</p>
+        <p>{fiche.host.picture}</p>
+        <p>{fiche.rating}</p>
+        <p>{fiche.location}</p>
+        <p>{fiche.equipments}</p>
+        <p>{fiche.tags}</p>
+      </>
     );
 };
 
-export default FicheLogement;

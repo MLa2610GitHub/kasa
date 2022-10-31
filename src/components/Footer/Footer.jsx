@@ -1,12 +1,19 @@
-import '../../../src/index.scss';
+import React from 'react';
+import logo from '../../assets/logo.png';
+import '../../index.scss';
 
+function Footer() {
+  const texteFooter = '© 2020 Kasa. All rights reserved';
 
-const Footer = () => {
   return (
-    <div className="footer">
-      <p className="texteFooter">© 2020 Kasa. All rights reserved</p>
+    <div className="footerContent">
+      <img src={logo} alt="Kasa" className="logoFooter" />
+
+      <div className="textFooter">
+        <p className="texteFooter">{texteFooter}</p>
+      </div>
     </div>
   );
-};
+}
 
 export default Footer;

@@ -1,6 +1,17 @@
+header {
+  width: 1240px;
+  height: 68px;
+  left: 100px;
+  top: 40px;
+}
+
 .navbar {
   display: flex;
   justify-content: flex-end;
+  left: 75.08%;
+  right: 0%;
+  top: 25%;
+  bottom: 25%;
 
   ul {
     display: flex;
@@ -28,8 +39,6 @@ a {
     text-decoration: underline;
   }
 }
-
-
 
 @media screen and (max-width: 500px) {
   nav {
